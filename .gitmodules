@@ -1,0 +1,3 @@
+[submodule "chisel-practice"]
+	path = chisel-practice
+	url = git@github.com:kamiyaowl/chisel-practice.git
