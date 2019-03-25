@@ -2,7 +2,6 @@
 
 module top(
   input        clock_in, // @[:@872.4]
-  input        reset, // @[:@873.4]
   output       io_uartTx, // @[:@874.4]
   input        io_uartRx, // @[:@874.4]
   input        io_switches_0, // @[:@874.4]
@@ -21,13 +20,21 @@ module top(
 
   wire sys_clk;
   wire locked;
-  wire reset;
   clk_wiz_0 clk0(
     .clk_out1(sys_clk), // 100MHz
     .locked(locked),
     .clk_in1(clock_in) // 100MHz single-ended pin
   );
-  assign reset = (!locked) | (io_switches_3); // PLLアンロック及びSW3で同期リセット
+
+  // sw[3]かPLLでリセットをかけるようにする
+  reg reset;
+  always @ (posedge sys_clk) begin
+    if((io_switches_3 == 1'b1) || !locked) begin
+      reset <= 1'b1;
+    end else begin
+      reset <= 1'b0;
+    end
+  end
 
   DebugAccessPort dap(
     .clock(sys_clk),
