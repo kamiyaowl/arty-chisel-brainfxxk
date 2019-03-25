@@ -21,7 +21,7 @@ module top(
   wire sys_clk;
   wire locked;
   clk_wiz_0 clk0(
-    .clk_out1(sys_clk), // 100MHz
+    .clk_out1(sys_clk), // 50MHz
     .locked(locked),
     .clk_in1(clock_in) // 100MHz single-ended pin
   );
