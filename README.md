@@ -1,6 +1,10 @@
 # arty-chisel-brainfxxk
 BrainFxxk Processor on Arty A7
 
+![preview](https://user-images.githubusercontent.com/4300987/55052799-7c7a7b00-509d-11e9-995d-fb8071305202.gif)
+
+# 描画例
+
 ## FizzBuzz
 
 ![image](https://pbs.twimg.com/media/D2kJbRzU0AAB1rh.png:large)
@@ -21,7 +25,7 @@ ScalaでHDLが記述できるChisel3で実装されたハードウェアbrainfuc
 
 # 書き込み
 
-本プロジェクトをクローンして書き込むか、[top.bit](https://github.com/kamiyaowl/arty-chisel-brainfxxk/blob/master/viavdo/arty-chisel-brainfxxk.runs/impl_1/top.bit)を書き込みます
+本プロジェクトをVivado 2018.3以降で開いて合成するか、[top.bit](https://github.com/kamiyaowl/arty-chisel-brainfxxk/blob/master/viavdo/arty-chisel-brainfxxk.runs/impl_1/top.bit)を書き込みます
 
 # 実行手順
 
