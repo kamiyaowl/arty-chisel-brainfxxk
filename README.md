@@ -38,5 +38,8 @@ ScalaでHDLが記述できるChisel3で実装されたハードウェアbrainfuc
 * SW1を上にスライドするとプログラムが実行されます
 * LD7(一番左の緑色LED)が点灯したらプログラム実行完了です
 
+# 解説記事
+
+[https://kamiyaowl.github.io/blog/chisel-bf-1/](https://kamiyaowl.github.io/blog/chisel-bf-1/)
 
 
